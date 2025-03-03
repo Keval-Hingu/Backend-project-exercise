@@ -3,7 +3,7 @@ import cookieParser from "cookie-parser";
 import cors from "cors"
 
 
-export const app = express();
+const app = express();
 
 // To configures the middlewares we were using the use() method of the app .
 
@@ -33,6 +33,14 @@ app.use(express.static("public"));
 // For Cookies CRUD Operations :
 
 app.use(cookieParser());
+
+
+
+// Routes Import :
+
+import userRouter from "./routes/user.routes.js"
+
+app.use("/api/v1/users/" ,userRouter);
 
 
 export {app}
