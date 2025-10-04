@@ -5,10 +5,10 @@ import connectDB from "./db/index.js";
 
 import { app } from "./app.js";
 
-// Other way : Createing separate file and fucntion for that and call it .
+// Other way : Createing separate file and function for that and call it .
 
 dotenv.config({
-    path: "./env"
+    path: "./.env"
 })
 
 
